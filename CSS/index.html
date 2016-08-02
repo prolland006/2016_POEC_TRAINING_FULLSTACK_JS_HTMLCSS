@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>CSS</h1>
+<section>
+    <h1>Généralités</h1>
+    <p>CSS: Cascading Style Sheets. Mécanisme pour ajouter du style (fonte, couleurs, espqacements, postionnements)
+    à un document HTML.</p>
+    <p>Version actuelle CSS 3, <a href="https://www.w3.org/Style/CSS/specs">Spécifications</a>. CSS est maintenant
+    organisé en modules: selecteurs, backgrounds et bordures, valeurs et unités, media queries,.... Vue d'ensemble <a
+                href="https://www.w3.org/Style/CSS/Overview.fr.html">ici</a>.</p>
+</section>
+<section>
+    <h1>CSS Rules</h1>
+    <h2>Selectors</h2>
+    <p>Permet de sélectionner le ou les éléments du document pour lesquels on veut changer la valeur de cerains propriétés.</p>
+    <pre><code>
+        <span style="color:orange;font-weight: bold;">p</span> {
+             color : red;
+             font-size:16px;
+        }
+    </code></pre>
+    <h2>Properties</h2>
+    <pre><code>
+        p {
+             <span>color</span> : red;
+             <span>font-size</span> :16px;
+        }
+    </code></pre>
+    <h2>Valeurs</h2>
+    <pre><code>
+        p {
+             color : <span>red</span>;
+             font-size :<span>16px</span>;
+        }
+    </code></pre>
+</section>
+<section>
+    <h1>Selectors</h1>
+    <p><a href="https://www.w3.org/TR/css3-selectors/">Spécification</a></p>
+    <p>. pour les class</p>
+    <p># pour les ids</p>
+    <h2>Exemples</h2>
+    <h3>elements, div, classes</h3>
+    <div class="green-bg bold">Hello</div>
+    <div class="green-bg">World</div>
+    <div id="smiley" class="bold">:-)</div>
+    <h3>pseudo elements</h3>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+    </table>
+    <h3>attributes</h3>
+    <form action="">
+        <label for="username">username</label>
+        <input id="username" type="text" name="username">
+        <label for="password">password</label>
+        <input id="password" type="password" name="password">
+        <input type="submit" value="Connect">
+    </form>
+</section>
+<section>
+    <h1>Référencer du CSS</h1>
+    <p>Les styles peuvent être définis comme suit, dans l'ordre de surcharge:</p>
+    <ol reversed>
+        <li>La feuille de style 'par défaut' du navigateur</li>
+        <li>Feuilles de style externes, balise link dans la balise head</li>
+        <li>Définir des styles localement via la balise style dans la balise head</li>
+        <li>Inline dans l'attribut style d'un élément HTML</li>
+    </ol>
+</section>
+<section>
+    <h1>Cascade</h1>
+    <p>Tous les styles "cascadent" du haut vers le bas de la feuille de style.</p>
+    <p>Ca permet d'ajouter ou de surcharger progressivement des styles.</p>
+    <p>Voir <a href="https://www.sitepoint.com/web-foundations/cascade/">CSS Cascade sur SitePoint</a></p>
+    <h2>Exemples</h2>
+    <p class="cascade">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci amet, cum delectus dicta exercitationem explicabo facere illum incidunt ipsum, odio odit quasi quisquam reiciendis repellendus similique vel voluptate voluptatem voluptates?</p>
+    <p class="cascade">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci, aliquam aut blanditiis deserunt dignissimos, dolor explicabo fuga iste molestiae omnis provident quo repellendus sed vel vitae voluptate. Itaque, soluta.</p>
+</section>
+<section>
+    <h1>Inheritance</h1>
+    <p>Mécanisme qui transmet automatiquement certaines propriétés d'un parent vers ses enfants. Attention, toutes les propriétés
+    ne sont pas hérités (cf background-color).</p>
+    <p>Voir <a href="http://reference.sitepoint.com/css/inheritance/">CSS Inheritance sur SitePoint</a></p>
+    <h2>Exemples</h2>
+    <div class="inheritance">
+        <p>
+            Cette <em>phrase</em> a une <a href="">font-size</a> de 20px.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h1>Specificity</h1>
+    <p>Mécanisme utilisé par CSS pour déterminer quelle règle prends le pas
+    quand plusieurs règles peuvent s'appliquer au même élément.</p>
+    <p>Pour chaque sélecteur, une spécificité est calculée.</p>
+    <p><a href="https://www.w3.org/TR/selectors/#specificity">W3C</a>, <a href="https://www.sitepoint.com/web-foundations/specificity/">SitePoint</a></p>
+    <h2>Exemples</h2>
+    <p class="specificity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, beatae consequuntur doloribus error eveniet, illo in libero maxime nemo nisi obcaecati omnis optio perferendis porro quam quibusdam rerum ut voluptate!</p>
+    <p id="specificity" class="specificity">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, blanditiis commodi dignissimos doloribus eaque est et, id illo in modi nisi nobis officia officiis possimus praesentium quidem sed sequi soluta!</p>
+    <p class="specificity some-other-class">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consequuntur excepturi facere facilis fugit illum minus nesciunt, nisi recusandae rem reprehenderit repudiandae sit tenetur? Modi nobis quasi reiciendis vitae voluptates?</p>
+</section>
+
+<section>
+    <h1>Box Model</h1>
+    <p>Voir <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">MDN</a>.</p>
+    <p>Chaque élément a une largeur et une hauteur par défaut.</p>
+    <p>Les éléments Block ont une largeur de 100%. Ils consomment toute place horizontale disponible.</p>
+    <p>Les éléments Inline et Inline-block s'étendent et se contractent verticalement par rapport à leur contenu.</p>
+    <p>Des éléments inline ne vont pas accepter de changement de valeur width et la height.</p>
+    <p>Des éléments block et inline-block vont accepter des changements de width et de height.</p>
+    <p>Il est possible de changer la propriété display pour passer d'un block a un inline et vice-versa.</p>
+    <p>Les éléments peuvent se voir ajuster leur margin (espace entre éléments) et padding (espace entre contenu et bordure)</p>
+    <p>La propriété box-sizing permet de définir comment les calculs liés au box model (taille d'une élément)
+        sont effectués par les navigateurs.</p>
+    <h2>Exemples</h2>
+    <div class="box-model">Je suis de type block</div>
+    <div class="box-model">Je suis de type block</div>
+    <p>Lorem ipsum <span class="box-model-span">dolor sit amet</span>, consectetur adipisicing elit. Aut corporis, culpa deserunt dicta eius labore libero, nihil optio pariatur porro quod quos, rerum sapiente sint ut! Eligendi eum voluptatem voluptatibus.</p>
+</section>
+<section>
+    <h1>Méthodologie</h1>
+    <ul>
+        <li>Partir d'une maquette</li>
+        <li>Choisir une approche mobile -> desktop (mobile first)  ou alors desktop -> mobile</li>
+        <li>
+            <ul>
+                <li>Essayer de trouver les composants / bloc autonomes potentiellement réutilisable</li>
+                <li>Réfléchir en système de grille: identifier lignes et les colonnes dans les lignes</li>
+            </ul>
+        </li>
+        <li>Reset les styles CSS (par exemple en utilisant un style existant <a href="http://cssreset.com/">http://cssreset.com/</a></li>
+        <li>Utiliser une méthodologie type <a href="http://getbem.com/">BEM</a>, <a href="https://smacss.com/">SMACSS</a> ou autres...</li>
+        <li>Utiliser des techniques de layout modernes si possible, voir <a href="http://www.learnlayout.com/">learnlayout.com</a>
+        <ul>
+            <li>flexbox
+                <ul>
+                    <li><a href="https://www.w3.org/TR/css-flexbox-1/">spec w3c</a></li>
+                    <li><a href="https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties">scotch.io</a></li>
+                    <a href="https://la-cascade.io/flexbox-guide-complet/">la casdade.io</a>
+                </ul>
+            </li>
+        </ul>
+        </li>
+        <li>Utilisez de beaux icones :-) <a href="https://thenounproject.com/">the noun project</a></li>
+    </ul>
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

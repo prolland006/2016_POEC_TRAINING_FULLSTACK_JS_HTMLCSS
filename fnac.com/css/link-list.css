@@ -1,0 +1,43 @@
+.link-list {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #232323;
+    color:white;
+    display:flex;
+    flex-wrap:wrap;
+}
+.link-list__item {
+    flex-basis:50%;
+    padding:20px 30px;
+}
+
+.link-list__item p {
+    font-size:14px;
+    line-height:24px;
+    text-transform: uppercase;
+    margin-bottom:15px;
+}
+
+.link-list__item ul {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    line-height:14px;
+}
+
+.link-list__item ul li {
+    margin-bottom:5px;
+}
+
+.link-list__item ul li a {
+    text-decoration:none;
+    color: #fff;
+}
+
+.link-list__item ul li a:hover {
+    text-decoration:underline;
+}
+
+@media screen and (min-width: 800px) {
+    .link-list__item {
+        flex-basis: 25%;
+    }
+}

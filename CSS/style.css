@@ -1,0 +1,114 @@
+code span {
+    color:red;
+    font-weight: bold;
+}
+
+div {
+    border: 1px dashed black
+}
+
+/*. pour les class*/
+.green-bg {
+    background-color: limegreen;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*#pour les id*/
+#smiley {
+   color: orangered;
+}
+
+/* pseudo elements */
+tr:nth-child(odd) { /* even ou odd */
+    background-color: #ccc;
+}
+
+tr:nth-child(1) {
+    background-color: darkblue;
+}
+
+input[name] {
+    border:1px solid blue;
+}
+
+input[type="submit"] {
+    background-color:green;
+}
+
+/* Pseudo class */
+input:focus {
+    background-color:lightgreen;
+}
+
+label:hover {
+    text-decoration: underline;
+}
+
+form::after {
+    content:' je suis ajouté par CSS :-)';
+}
+
+/* Cascade */
+p.cascade {
+    background-color: orange;
+    font-size:24px;
+}
+
+p.cascade {
+    background-color: hotpink;
+}
+
+
+/* inheritance */
+div.inheritance {
+    font-size: 20px;
+}
+
+
+/* specificity */
+
+p.specificity {
+    background-color:rebeccapurple;
+}
+
+.specificity {
+    background-color:darkgoldenrod;
+}
+
+/*p {*/
+    /*background-color: chartreuse;*/
+/*}*/
+
+#specificity {
+    background-color: peachpuff;
+}
+
+section p.specificity {
+    background-color: indianred;
+}
+
+/* box model */
+.box-model {
+    border: 3px solid #666;
+    background-color:khaki;
+    width:100px;
+    height:100px;
+    padding:10px;
+    margin-bottom:10px;
+    box-sizing: border-box;
+}
+
+.box-model-span {
+    border: 3px solid black;
+    padding:10px;
+    margin:10px;
+    width:500px; /* marche po, car inline */
+    height:300px; /* non plus ... */
+}
+
+
+
+

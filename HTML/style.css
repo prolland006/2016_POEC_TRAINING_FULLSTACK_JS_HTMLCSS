@@ -1,0 +1,22 @@
+/*
+h1 => tous les h1 dans la page
+section h1 => tous les h1 descendants de section
+section > h1 => tous les h1 enfant direct (1er niveau) de section
+*/
+
+section {
+    border-bottom: 1px solid #ccc;
+}
+
+section > h1 {
+    /*font-size: 20px;*/
+     /*color: rgb(13, 105, 255); !* rgb(255,0,0); #FF0000   #F00 *!*/
+    /*font-family: Arial, sans-serif;*/
+}
+
+p {
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 18px;
+}

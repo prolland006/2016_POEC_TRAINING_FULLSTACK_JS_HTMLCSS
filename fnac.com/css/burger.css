@@ -1,0 +1,11 @@
+.burger {
+}
+.burger__item {
+    height: 4px;
+    background-color: #323232;
+    margin-bottom:calc((100% - 3 * 4px)/2);
+}
+
+.burger__item:last-child {
+    margin-bottom:0;
+}

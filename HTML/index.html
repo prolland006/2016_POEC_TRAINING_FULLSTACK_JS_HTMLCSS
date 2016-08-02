@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>HTML</h1>
+<section>
+    <h1>HTML</h1>
+    <p>HTML est un langage structuré basé sur des balises.</p>
+    <p>HTML (5) est défini par le <a href="https://www.w3.org/TR/html5/">W3C</a> et le <a href="https://html.spec.whatwg.org/multipage/">WHATWG</a>.</p>
+    <p>Ce qu'est HTML (WhatWG) est défini ici <a href="https://developers.whatwg.org/introduction.html">HTML: The Living Standard</a>.</p>
+    <p><a href="http://caniuse.com/">caniuse.com</a> est un bon site pour savoir quel navigateur supporte quelle fonctionnalité...</p>
+</section>
+<section>
+    <h1>Généralités sur HTML</h1>
+    <p>Dans la balise &lt;body&gt; se trouve le contenu qui sera visible dans le navigateur.</p>
+    <p>
+        Penser impérativement à valider vos documents HTML dans votre IDE et par exemple via <a
+            href="https://validator.w3.org/">un validateur HTML</a>.
+    </p>
+    <p>Les entités HTML permettent d'éviter l'interprétation de certains caractères comme &gt;.</p>
+    <p>Les commentaires sont délimités par &lt;!-- --&gt;</p>
+    <!--Un exemple de commentaire HTML-->
+    <p>Utiliser les <a href="https://www.w3.org/TR/html5/dom.html#content-models">Content Models</a> pour savoir ce que peuvent contenir les éléments HTML.</p>
+</section>
+<section>
+    <h1>Elements HTML</h1>
+    <article>
+        <h1>a</h1>
+        <p>La balise &lt;a&gt; permet de créer des hyperlinks.</p>
+        <h2>Exemples d'utilisation</h2>
+        <h3>Liens relatifs</h3>
+        <a href="a.html">lien relatif vers le document a.html</a>
+        <a href="/HTML5_CSS3/HTML/a.html">lien relatif depuis la racine du domaine vers le document a.html</a>
+        <h3>Liens absolus</h3>
+        <a href="http://localhost:63342/HTML5_CSS3/HTML/index.html">lien absolu vers le document a.html</a>
+        <h3>Ancres</h3>
+        <a href="#anchor">Lien interne vers un élément id="anchor"</a>
+        <h2>Attributs intéressants</h2>
+        <p>L'attribut target permet de suggérer au navigateur l'endroit où ouvrir le lien.</p>
+    </article>
+    <article>
+        <h1>ul</h1>
+        <p>Les balises ul, ol et dl permettent de créer des listes</p>
+        <h2>Exemples d'utilisation</h2>
+        <h3>ul</h3>
+        <ul>
+            <li><a href="">item-1</a></li>
+            <li>item-2</li>
+            <li>item-3</li>
+        </ul>
+        <h3>ol</h3>
+        <ol>
+            <li>item-1</li>
+            <li>item-2</li>
+            <li>item-3</li>
+        </ol>
+        <h3>dl</h3>
+        <dl>
+            <dt>Titre item 1</dt>
+            <dd>Definition item 1</dd>
+            <dt>Titre item 2</dt>
+            <dd>Definition item 2</dd>
+            <dt>Titre item 3</dt>
+            <dd>Definition item 3</dd>
+        </dl>
+    </article>
+    <article>
+        <h1>table</h1>
+        <p>table > table row > table division</p>
+        <h2>Exemples d'utilisation</h2>
+
+        <table border="1">
+            <thead>
+            <tr>
+                <th>col 1</th>
+                <th>col 2</th>
+                <th>col 3</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>cellule 1</td>
+                    <td>cellule 2</td>
+                    <td>cellule 3</td>
+                </tr>
+                <tr>
+                    <td>cellule 1</td>
+                    <td colspan="2">cellule 2</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">cellule 1</td>
+                    <td>cellule 2</td>
+                    <td>cellule 3</td>
+                </tr>
+                <tr>
+                    <td>cellule 2</td>
+                    <td>cellule 3</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>foot 1</td>
+                    <td>foot 2</td>
+                    <td>foot 3</td>
+                </tr>
+            </tfoot>
+        </table>
+    </article>
+    <article>
+        <h1>form</h1>
+        <p>Les formulaires permettent de saisir des entrées utilisateur.</p>
+        <h2>Attributs intéressants</h2>
+        <dl>
+            <dt>method</dt>
+            <dd>Généralement post ou get</dd>
+            <dt>name</dt>
+            <dd>Nom du paramètre envoyé au serveur. Requis pour que le champs soit transmis</dd>
+            <dt>id</dt>
+            <dd>Permet d'associer d'identifier de manière unique des champs de formulaire, pratique pour association avec labels (for) ou manipulation en CSS ou JavaScript</dd>
+            <dt>value</dt>
+            <dd>La valeur du champs du formulaire. Pratique pour initialiser un champs à une valeur.</dd>
+            <dt>placeholder</dt>
+            <dd>Indication si champs vide. s'efface à la saisie</dd>
+        </dl>
+        <h2>Exemples d'utilisation</h2>
+        <form action="#" method="post">
+            <label for="nom">nom</label>
+            <input id="nom" type="text" placeholder="saisir votre nom" name="nom">
+            <br>
+            <label for="prenom">prenom</label>
+            <input id="prenom" type="text" placeholder="saisir votre prenom" name="prenom">
+            <br>
+            <label for="password">password</label>
+            <input id="password" type="password" placeholder="saisir votre password" name="password">
+            <br>
+            <label for="gender-m">male</label>
+            <input id="gender-m" type="radio" value="M" name="gender">
+            <label for="gender-f">female</label>
+            <input id="gender-f" type="radio" value="F" name="gender">
+            <br>
+            <label for="co-html">HTML</label>
+            <input id="co-html" type="checkbox" value="html" name="competences">
+            <label for="co-css">CSS</label>
+            <input id="co-css" type="checkbox" value="css" name="competences">
+            <label for="co-js">JavaScript</label>
+            <input id="co-js" type="checkbox" value="js" name="competences">
+            <br>
+            <label for="description">JavaScript</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <input type="submit" value="Enregistrer">
+        </form>
+    </article>
+    <article>
+        <h1>img</h1>
+        <h2>Exemples d'utilisation</h2>
+        <img src="http://dummyimage.com/320x200/000/fff" alt="une image factice">
+    </article>
+    <article>
+        <h1>Grouper le contenu</h1>
+        <p>section, article, header, footer, nav, aside, div, span</p>
+    </article>
+</section>
+</body>
+</html>

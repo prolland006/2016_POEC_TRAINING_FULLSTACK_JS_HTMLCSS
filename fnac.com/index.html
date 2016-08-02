@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header-block.css">
+
+    <!--blocks / composants-->
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="css/menu-icon-flex.css">
+    <link rel="stylesheet" href="css/search-form.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/link-list.css">
+
+</head>
+<body>
+<header class="header">
+    <a class="header__menulink" href="">
+        <div class="burger">
+            <div class="burger__item"></div>
+            <div class="burger__item"></div>
+            <div class="burger__item"></div>
+        </div>
+    </a>
+    <a class="header__logolink" href="">
+        <img src="img/logo.svg" alt="logo fnac">
+    </a>
+    <nav class="header__shoplinks">
+        <div class="menu-icon-flex">
+            <a class="menu-icon-flex__item menu-icon-flex__item--hidden" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNy41IDU1LjVzNi43NiAxNSAxNSAxNWM4LjMzMyAwIDE1LTYuNzYzIDE1LTE1IC4wOS04LjMzLTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMy41IDU5LjVoM3YzaC0zek0xOC4yOTMgNTQuOTQ1Yy0uOTIuNzE0LTEuODM3IDEuMjMtMi4wNCAyLjQ0OFY1OC41SDEzLjV2LTEuMjFjLjEwNC0xLjgzNyAxLjAxNy0yLjY2IDEuODM1LTMuMjcuODEzLS42MDYgMS41MzItMS4xMiAxLjUzMi0yLjI0NCAwLTEuMjI4LS42MDctMS44MzYtMS43My0xLjgzNi0xLjUzMyAwLTIuMTQ3IDEuMjMtMi4xNDcgMi42Nkg5LjkzYy4xMDUtMi45NiAyLjA0Mi01LjEgNS01LjEgMy44NzcgMCA1LjIwNCAyLjQ1IDUuMjA0IDMuOTc3LS4wOTggMS45MzctMS4wMjIgMi43Ni0xLjg0IDMuNDY4eiIvPjwvc3ZnPg==" alt="">
+            </a>
+            <a class="menu-icon-flex__item" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNjYuNSA1NS41czYuNzU2IDE1IDE1IDE1YzguMzMzIDAgMTUtNi43NjIgMTUtMTUgLjA5LTguMzM0LTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xNS41IDQ3LjVjLTIuMzYyIDAtNC4yNDggMS41ODMtNC44MSAzLjczLS4wOTguMzc1LS4xOS44NC0uMTkgMS4yMTQgMCAuNzQ0LjM3OCAxLjk2Mi44NSAyLjcwNi4xODguMjgyIDQuMTUgNi4zNSA0LjE1IDYuMzVzMy45NjItNi4xNTggNC4xNS02LjM1Yy40NzctLjg0Ljg1LTEuOTYyLjg1LTIuNzA2IDAtLjQ3LS4wOTgtLjg0LS4xOS0xLjIxMy0uNTYtMi4xNDctMi41NDYtMy43My00LjgxLTMuNzN6Ii8+PGVsbGlwc2UgY3g9IjE1LjUiIGN5PSI1Mi4yNTgiIHJ4PSIxLjc4OSIgcnk9IjEuNzciLz48L3N2Zz4=" alt="localisation magasin">
+            </a>
+            <a class="menu-icon-flex__item" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNy41IDU1LjVzNi43NiAxNSAxNSAxNWM4LjMzMyAwIDE1LTYuNzYzIDE1LTE1IC4wOS04LjMzLTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxnIGZpbGw9IiNGRkYiPjxwYXRoIGQ9Ik0xOS41IDU1Ljc5N2MtLjk5Ny45OTYtMi40IDEuNjk1LTQgMS42OTVzLTMtLjctNC0xLjY5NUM5LjY5NyA1NyA4LjUgNTkuNSA4LjUgNjEuNWgxNGMwLTIuMDA0LTEuMTAyLTQuNDAzLTMtNS43MDN6TTEzLjQ5IDU0LjkwM2MuNTk2LjQgMS4zLjU5NyAyIC41OTcuNzk2IDAgMS41LS4yIDItLjU5Ny44OTgtLjU5NiAxLjUtMS42OTYgMS41LTIuOSAwLTEuODk4LTEuNTk0LTMuNTAzLTMuNS0zLjUwMy0xLjkwOCAwLTMuNSAxLjU5NS0zLjUgMy41MDMuMDAzIDEuMjA0LjYgMi4zMDUgMS41IDIuOXoiLz48L2c+PC9zdmc+" alt="mon compte">
+            </a>
+            <a class="menu-icon-flex__item" href="">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMC41IDQwLjUgMzAgMzAiPjxwYXRoIGQ9Ik0xNS41OSA0MC41QzcuMjU3IDQwLjUuNSA0Ny4xNy41IDU1LjVzNi43NiAxNSAxNSAxNWM4LjMzMyAwIDE1LTYuNzYzIDE1LTE1IC4wOS04LjMzLTYuNjc3LTE1LTE0LjkxLTE1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0yMS45OCA1MS41aC0yLjc5di0uMTkyYzAtMi4xNjUtMS42Mi0zLjc5My0zLjY3Ny0zLjgwOGgtLjAyNmMtMi4wNTYuMDE1LTMuNjc4IDEuNjQzLTMuNjc4IDMuODA4di4xOTJIOC45OTdjLS4zIDAtLjQ5OC4zOTctLjQ5OC42OTJsMS4zOSA3LjMyYy4xMDIuNTkuNjkuOTg3IDEuMjg0Ljk4N2g4LjYzMmMuNTkgMCAxLjE5LS4zIDEuMjg1LS44OWwxLjM5LTcuNDJjLjEtLjM5LS4xOTgtLjY5LS41LS42OXptLTguNTMgMHYtLjE5MmMwLTEuMjYyLjg3NS0yLjI3NSAyLjA1LTIuMjc1IDEuMTg1IDAgMi4wNTIgMS4wMTQgMi4wNTIgMi4yNzV2LjE5MkgxMy40NXoiLz48L3N2Zz4=" alt="mon panier">
+            </a>
+       </div>
+    </nav>
+    <section class="header__search">
+        <form class="search-form" action="">
+            <input class="search-form__bar" type="text" name="query" placeholder="Que recherchez-vous ?">
+            <button class="search-form__submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </section>
+</header>
+<section class="showcase">
+    <div class="slider">
+        <img class="slider__image" src="http://dummyimage.com/800x200/000/fff" alt="">
+        <a class="slider__button" href="">En profiter</a>
+    </div>
+</section>
+<section class="bon-plans gallery">
+    <header class="gallery__header">
+        <h1>Bons plans de l'été: jusqu'à -50%</h1>
+    </header>
+    <div class="gallery__items">
+        <div class="gallery__item">
+            <div class="gallery__item__img-container">
+                <img src="img/5e2a9be6-f6c7-472a-92df-790a46946e94.JPG" alt="">
+            </div>
+            <p>iPad Pro</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__img-container"><img src="img/5786b9ef-8ba3-4a3b-abad-1d411ed85b37.JPG" alt=""></div>
+            <p>Informatique</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__img-container"><img src="img/186a618f-868d-4842-8ca9-c6460058c444.JPG" alt=""></div>
+            <p>Son, casques, enceintes</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__img-container"><img src="img/7fb62ca3-9882-4a81-b8d9-2016b2f81bd7.JPG" alt=""></div>
+            <p>Xbox One S 2To Blu-Ray 4k</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__img-container"><img src="img/5a0a6dc0-741c-4222-a502-4193a5bd665e.JPG" alt=""></div>
+            <p>TV, Vidéo</p>
+        </div>
+        <div class="gallery__item">
+            <div class="gallery__item__img-container"><img src="img/186d540c-3e12-4410-9678-997928ac3629.JPG" alt=""></div>
+            <p>Maison & Cuisine</p>
+        </div>
+    </div>
+</section>
+<footer>
+    <section class="link-list">
+        <div class="link-list__item">
+            <p>LE GROUPE FNAC</p>
+            <ul>
+                <li><a href="">Qui sommes nous ?</a></li>
+                <li>Recrutement</li>
+                <li>Développement durable</li>
+            </ul>
+        </div>
+        <div class="link-list__item">
+            <p>AIDE, SAV & SERVICES</p>
+            <ul>
+                <li>SAV</li>
+                <li>Besoin d'aide ?</li>
+                <li>Argus reprise</li>
+                <li>Cartes cadeaux Fnac</li>
+                <li>Affiliation</li>
+                <li>Publicité</li>
+            </ul>
+        </div>
+        <div class="link-list__item">
+            <p>À PROPOS</p>
+            <ul>
+                <li>Conditions générales de ventes</li>
+                <li>Données personnelles</li>
+                <li> Mentions légales</li>
+                <li>Signaler un abus</li>
+                <li>Cookies</li>
+                <li>Résultats des concours</li>
+            </ul>
+        </div>
+        <div class="link-list__item">
+            <p>À LA FNAC</p>
+            <ul>
+                <li>Fnacpro</li>
+                <li>Labofnac</li>
+                <li>Fnac Market Place</li>
+                <li>Fnac Jukebox</li>
+                <li>FnacPLAY</li>
+                <li>Abonnements presse</li>
+            </ul>
+        </div>
+    </section>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<style>-->
+    <!--.ad {-->
+        <!--display:flex;-->
+        <!--flex-direction: column;-->
+    <!--}-->
+    <!--.ad a {-->
+        <!--align-self: center;-->
+        <!--background-color:red;-->
+    <!--}-->
+
+<!--</style>-->
+<!--<section class="ad">-->
+    <!--<img src="http://dummyimage.com/320x200/000/fff" alt="">-->
+    <!--<a href="">link ?</a>-->
+<!--</section>-->
+</body>
+</html>
